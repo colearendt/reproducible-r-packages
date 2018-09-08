@@ -1,0 +1,89 @@
+---
+title: "Package Management for<br>Reproducible R Code"
+author: "Cole Arendt"
+date: "9/8/2018"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+class: inverse, center, middle
+
+# Overview
+
+---
+
+# R Packages for Data Science
+
+.pull-left[
+
+### Why is it hard?
+
+- 1,000's of packages (12,000+)
+
+- Packages make us more effective & more efficient
+
+- Time changes everything
+
+- Newer packages are better!
+
+- Open source moves at the *speed of light*
+
+- Dependency management is hard
+
+- Security
+
+]
+
+--
+
+.pull-right[
+
+
+### Reproducibility 
+
+> Reproducibility means your project or result
+> can be recomputed reliably in another time or place
+
+### Focus
+
+We are focusing here on the R user, a way of thinking,
+and the tools that can make your life easier
+
+]
+
+---
+
+# Explorer vs. Builder
+
+.pull-left[ 
+```{r, fig.cap="Some explorers"}
+knitr::include_graphics("./mountain-climbing.png")
+```
+]
+
+.pull-right[
+
+```{r, fig.cap="The work of a builder"}
+knitr::include_graphics("./pyramids.jpg")
+```
+]
+
+---
+
+background-image: url(./spectrum-notext.png)
+background-size: contain
+background-position: 90% 95%
+
+# Every project lives somewhere
+
