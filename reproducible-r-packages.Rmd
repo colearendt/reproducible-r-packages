@@ -67,16 +67,51 @@ and the tools that can make your life easier
 # Explorer vs. Builder
 
 .pull-left[ 
+### Explorer
 ```{r, fig.cap="Some explorers"}
 knitr::include_graphics("./mountain-climbing.png")
 ```
 ]
 
-.pull-right[
+--
 
+.pull-right[
+### Builder
 ```{r, fig.cap="The work of a builder"}
 knitr::include_graphics("./pyramids.jpg")
 ```
+]
+
+---
+
+# Explorer vs. Builder
+
+.pull-left[
+### Explorer
+
+- Values being mobile / versatile
+
+- Values speed
+
+- Tent for the night
+
+- Moving each night
+
+- Not thinking long term 
+]
+
+--
+
+.pull-right[
+### Builder
+
+- Invests in the foundation
+
+- Planning to stay in this location for a while
+
+- Need future generations to enjoy
+
+-  
 ]
 
 ---
