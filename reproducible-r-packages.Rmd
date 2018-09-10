@@ -122,3 +122,9 @@ background-position: 90% 95%
 
 # Every project lives somewhere
 
+---
+
+# Useful links
+
+- https://rviews.rstudio.com/2018/01/18/package-management-for-reproducible-r-code/
+- https://rviews.rstudio.com/2018/03/21/multiple-versions-of-r/
