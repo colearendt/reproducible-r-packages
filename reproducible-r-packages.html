@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Package Management for Reproducible R Code</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Cole Arendt" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Package Management for<br>Reproducible R Code
+### Cole Arendt
+### 9/8/2018
+
+---
+
+
+
+
+
+class: inverse, center, middle
+
+# Overview
+
+---
+
+# R Packages for Data Science
+
+.pull-left[
+
+### Why is it hard?
+
+- 1,000's of packages (12,000+)
+
+- Packages make us more effective &amp; more efficient
+
+- Time changes everything
+
+- Newer packages are better!
+
+- Open source moves at the *speed of light*
+
+- Dependency management is hard
+
+- Security
+
+]
+
+--
+
+.pull-right[
+
+
+### Reproducibility 
+
+&gt; Reproducibility means your project or result
+&gt; can be recomputed reliably in another time or place
+
+### Focus
+
+We are focusing here on the R user, a way of thinking,
+and the tools that can make your life easier
+
+]
+
+---
+
+# Explorer vs. Builder
+
+.pull-left[ 
+### Explorer
+![Some explorers](./mountain-climbing.png)
+]
+
+--
+
+.pull-right[
+### Builder
+![The work of a builder](./pyramids.jpg)
+]
+
+---
+
+# Explorer vs. Builder
+
+.pull-left[
+### Explorer
+
+- Values being mobile / versatile
+
+- Values speed
+
+- Tent for the night
+
+- Moving each night
+
+- Not thinking long term 
+]
+
+--
+
+.pull-right[
+### Builder
+
+- Invests in the foundation
+
+- Planning to stay in this location for a while
+
+- Need future generations to enjoy
+
+-  
+]
+
+---
+
+background-image: url(./spectrum-notext.png)
+background-size: contain
+background-position: 90% 95%
+
+# Every project lives somewhere
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
