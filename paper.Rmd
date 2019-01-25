@@ -81,7 +81,15 @@ ingredients are the R packages that support and facilitate his work. He has a
 distributor that he gets his ingredients from, and then he has "best practices"
 for his management of the ingredients when they arrive in his kitchen.
 
+We will make use of this analogy throughout our paper.
 
+## THE SOURCE
+
+## THE INGREDIENTS
+
+## THE RECIPE
+
+## THE WHOLE PROCESS
 
 # USEFUL APPROACHES
 
