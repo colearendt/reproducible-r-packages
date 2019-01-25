@@ -251,5 +251,20 @@ learned will be transferrable to this alternative philosophy.
 
 # CONCLUSION
 
+When a chef embarks on a quest to make delicious food, she most often begins
+in more humble employment than at the most famous restaurants around. In such
+employment, she may not need the same standard of reproducibility in her work
+that she will once established and making world-renown dishes.
+
+Similarly, not every researcher or R programmer needs to make the same decisions
+around reproducibility for R packages. Armed with the appropriate best practices
+and axes upon which decisions can be made, the researcher is free to explore her
+package sources, package selection, and list of installed packages. By
+adequately managing these fronts, she is freed from the concern that open source
+efficiency and high quality reproducibility are diametrically opposed.
+Rather, the open source ecosystem serves to optimize, improve, and extend
+even the reproducibility of packages over time, paving the way to a more
+reproducible (and tasty) future.
+
 # REFERENCES
 
