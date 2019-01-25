@@ -244,7 +244,7 @@ reproducible fashion as discussed above, the reproducibility that these
 whole-environment snapshots will provide still remains limited. 
 
 As a result, we recommend to start the journey of reproducibility by managing R
-packages as discussed above. When moving into a ephemeral paradigm like Docker,
+packages as discussed above. When moving into an ephemeral paradigm like Docker,
 Singularity, Kubernetes, or Infrastructure as Code, the researcher will benefit
 from having thought deeply about package reproducibility and many of the lessons
 learned will be transferrable to this alternative philosophy.
