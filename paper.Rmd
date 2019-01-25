@@ -93,6 +93,12 @@ We will make use of this analogy throughout our paper.
 
 # USEFUL APPROACHES
 
+## CLIENT AND SERVER
+
+## CONTROL THE SOURCE
+
+## MORE BEST PRACTICES
+
 # CONCLUSION
 
 # REFERENCES
