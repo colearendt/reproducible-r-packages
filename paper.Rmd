@@ -35,9 +35,10 @@ programming language. Packages are shared most often via the "Comprehensive R
 Archive Network" (CRAN), but also via GitHub, BioConductor and RForge.
 
 With over 12,000 such packages, the R programmer's toolbelt is enormously
-varied and she can be incredible effective as a result. However, this vibrant
+varied and she can be incredibly effective as a result. However, this vibrant
 ecosystem does not come without its risks, so the _way_ in which these
-packages are managed by a researcher is important for 
+packages are managed by a researcher is important for the reproducibility of
+her work.
 
 # WHY R PACKAGES
 
@@ -174,17 +175,58 @@ types of package exploration, validation, and auditing can take place.
 ## THE RECIPE
 
 Once sources have been vetted and ingredients have been decided, our chef
-is free to work her magic. 
+is free to work her magic. Most chefs that care about reproducibility
+will keep a list of the ingredients that went into their dish, and the
+same should be true for researchers.
+
+Lest we arrive at a tasty meal that we cannot reproduce, we ought to take
+proactive efforts during the development process to ensure reproducibility. As
+was the case above, there are many factors which might be included into the
+researcher's approach. While above we spoke about package sources and the
+"middle-man" who handles the packages before they arrive in the kitchen, now we
+will discuss the chef's actions. You might imagine she writes down all the
+ingredients up front, or incrementally as she goes, or perhaps only when her
+dish is complete. The same is true for a researcher.
+
+As was discussed in a [blog post on this topic](todo), the researcher's
+perspective of their project may very much shape her choices at the outset. For
+instance, she may opt to use `sessionInfo()` or `devtools::session_info()` as a
+lightweight way to record package versions intermittently as she goes. To this
+approach, I would also suggest `packrat::.snapshotImpl("./", snapshot.sources =
+FALSE)` be included as a lightweight way to record exact package versions.
+
+
+In the case of a frozen repository like MRAN or Package Manager, the researcher
+may opt at the outset to install packages from a snapshot in time by using the
+[`checkpoint`](todo) package or by specifying a Package Manager transaction:
+
+```r
+options("repos" = "https://mypackagemanager.com/cran/773")
+```
+
+Further, the researcher might decide to opt to use [`packrat`](todo) or a
+similar package that takes a proactive approach to tracking and ensuring that
+packages are managed in a reproducible fashion. `packrat`, in particular, is a
+very powerful tool that RStudio uses within its enterprise offerings. When using
+`packrat`, the most important thing to track and maintain is the
+`packrat/packrat.lock` file, which houses everything needed to rebuild a
+project.
+
+Though `packrat` is a powerful tool, it also has some user experience problems
+that can make working with it tricky. RStudio is in the process of building a
+reimaginination of packrat that keeps its strengths while discarding some of the
+difficulties. If using `packrat` to manage reproducibility, discussion is
+welcome at [community.rstudio.com](todo) for how to manage projects.
+
+Specifically, a few highlights:
+
+- do not version control package sources
+- use the packrat global cache if possible
+- version control the `packrat/packrat.lock` file
+- consider version controlling `packrat/packrat.opts`
 
 ## THE WHOLE PROCESS
 
-# USEFUL APPROACHES
-
-## CLIENT AND SERVER
-
-## CONTROL THE SOURCE
-
-## MORE BEST PRACTICES
 
 # CONCLUSION
 
