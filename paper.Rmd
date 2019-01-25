@@ -122,7 +122,9 @@ environments that may be offline or have limited access to the internet.
 If you are interested in setting up your own repository, popular options are
 [Artefactory](todo), [miniCRAN](todo), and [RStudio Package Manager](todo). Each
 varies in its approach at some level, so a survey of the capabilities of each is
-helpful to the decision making process.
+helpful to the decision making process. A private repository can have the added
+benefit of facilitating private package development for one's own enterprise or
+organization.
 
 A final recommendation on package sources is to consider a source or inspector
 that can track or freeze the state of the repository. This approach is the
@@ -138,7 +140,41 @@ moment in time.
 
 ## THE INGREDIENTS
 
+Once the sources have been decided and an architecture for delivering such
+ingredients has been designed, the question moves to _which_ ingredients.
+Though a chef may have access to many sources, she must still decide
+which ingredients will make the most delicious meal.
+
+For R packages, these decisions traditionally fall along a handful of axes:
+
+- The license the package source is under
+- The popularity of the package
+- Is the package under active development
+- Does the package meet source requirements (i.e. CRAN)
+- Has it passed necessary security checks
+
+Every researcher and every organization will differ in how they decide
+along these points. However, it is worth noting some common tools for
+this type of decision making.
+
+For deciding on licenses, there are websites like [rdrr.io](https://rdrr.io)
+and [cran.rstudio.com](https://cran.rstudio.com) that allow the exploration
+of package sources. Further, tools like [RStudio Package Manager](todo) add
+helpful search and filtering features along licenses.
+
+For popularity, there is much soft / informal exploration of social sentiment
+and GitHub traffic, as well as more explicit data captured by
+[cranlogs](https://cranlogs.r-pkg.org/) on worldwide package use, and
+private usage information captured by [Package Manager](todo).
+
+The other decision points are a bit more sensitive to each organization, but
+they are greatly simplified by having an internal repository where these
+types of package exploration, validation, and auditing can take place.
+
 ## THE RECIPE
+
+Once sources have been vetted and ingredients have been decided, our chef
+is free to work her magic. 
 
 ## THE WHOLE PROCESS
 
