@@ -1,0 +1,91 @@
+---
+title: "Best Practices for Reproducible Package Management in R"
+author: "Cole Arendt"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# ABSTRACT
+
+R packages are the staple of an R programmer’s effectiveness. Since R is an open
+source language with a robust package (extension) framework, “Base R” (R with no
+packages) can be relatively featureless. However, add the CRAN package network
+of 12,000 packages (and growing), and the R programmer instantly becomes
+enormously efficient and powerful. It raises an immediate question, though: How
+do we use those open source packages in a reliable and reproducible way? We will
+discuss best practices for managing packages as an individual developer and as
+an enterprise. If we can do this successfully, we will establish a firm
+foundation on which to build reliable results.
+
+# INTRODUCTION
+
+The R package ecosystem extends the R programming language in just about any
+direction imaginable. It enables and empowers the open source community
+surrounding R to collaborate and contribute to collective improvements that all
+users can share. These packages simplify (among other things) the process of
+fitting models, analyzing data, logging, visualizing, adding emojis, creating
+user interfaces, building REST APIs, and munging spreadsheets.
+
+In fact, the R package ecosystem might be _the_ most valuable part of the R
+programming language. Packages are shared most often via the "Comprehensive R
+Archive Network" (CRAN), but also via GitHub, BioConductor and RForge.
+
+With over 12,000 such packages, the R programmer's toolbelt is enormously
+varied and she can be incredible effective as a result. However, this vibrant
+ecosystem does not come without its risks, so the _way_ in which these
+packages are managed by a researcher is important for 
+
+# WHY R PACKAGES
+
+The first question a security minded or IT staff person might ask, though, is _why_? Why expose yourself to the risk of using an open source package that
+might break unexpectedly, have a security vulnerability, or do something
+subtly incorrect? Would not R _by itself_ be much more reliable, reproducible,
+and secure?
+
+These are valid and immensely valuable questions. We would answer on several 
+fronts:
+
+- The R package ecosystem contains decades or centuries of collective software
+engineering, research, and algorithm optimization. To omit this work from
+your toolbelt without inquiry is to epitomize re-inventing the wheel
+- Not all packages are created equal. Some are fringe experiments or pet
+projects and are not fitting for reproducible research. Likewise, others are
+serious software engineering funded by reputable organizations or maintained
+by renown programmers.
+- R packages have _standards._ `R CMD CHECK`, as well as many of `CRAN`'s checks
+help validate that an R package does not have certain types of illicit,
+insecure, or dangerous behavior.
+- R packages thrive in a community of open source contributors who are vetting,
+testing, validating, and improving algorithms and processes. Such a community is
+far more effective and thorough than any CI pipeline.
+
+Suffice it to say that R packages are desirable to the R programmer, and we will
+assume this for the rest of our work. However, the concerns above must still be
+addressed, and we will propose best practices for addressing these concerns.
+
+## AN ANALOGY
+
+Let us imagine a chef who is working for a five-star restaurant. This chef
+creates remarkable meals in his kitchen and becomes renown for his work.
+We might guess that this chef cares _very much_ about where he gets his
+ingredients from, as the ingredients are integral to his dishes. Further,
+this chef will care very much _more_ about his ingredients and spend much
+more time examining and understanding them than the average person.
+
+In our analogy, the chef is a researcher and his dishes are his research. His
+ingredients are the R packages that support and facilitate his work. He has a
+distributor that he gets his ingredients from, and then he has "best practices"
+for his management of the ingredients when they arrive in his kitchen.
+
+
+
+# USEFUL APPROACHES
+
+# CONCLUSION
+
+# REFERENCES
+
