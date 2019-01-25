@@ -121,7 +121,7 @@ package sources themselves. Further, it is immensely helpful in enterprise
 environments that may be offline or have limited access to the internet.
 
 If you are interested in setting up your own repository, popular options are
-[Artefactory](todo), [miniCRAN](todo), and [RStudio Package Manager](todo). Each
+[Artifactory](https://jfrog.com/artifactory/), [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-introduction.html), and [RStudio Package Manager](https://www.rstudio.com/products/package-manager/). Each
 varies in its approach at some level, so a survey of the capabilities of each is
 helpful to the decision making process. A private repository can have the added
 benefit of facilitating private package development for one's own enterprise or
@@ -129,12 +129,12 @@ organization.
 
 A final recommendation on package sources is to consider a source or inspector
 that can track or freeze the state of the repository. This approach is the
-approach taken by [MRAN](todo) (Microsoft's copy of CRAN). Microsoft takes a
+approach taken by [MRAN](https://mran.microsoft.com/) (Microsoft's copy of CRAN). Microsoft takes a
 copy of CRAN every day, so that users can point to a given date with the
 `checkpoint` package (i.e. "2018-01-01") and see CRAN as it existed on that day.
 This type of "frozen" repository is helpful for researchers who need to
 reproduce work done at a previous time or ensure that package installation
-always returns the same packages. [RStudio Package Manager](todo) adopts a
+always returns the same packages. [RStudio Package Manager](https://docs.rstudio.com/rspm/admin/repositories.html#repo-versions) adopts a
 similar approach, except _every_ event to the repository is tracked as an
 immutable transaction, allowing full reproducibility of the repository to a
 moment in time.
@@ -160,13 +160,13 @@ this type of decision making.
 
 For deciding on licenses, there are websites like [rdrr.io](https://rdrr.io)
 and [cran.rstudio.com](https://cran.rstudio.com) that allow the exploration
-of package sources. Further, tools like [RStudio Package Manager](todo) add
+of package sources. Further, tools like [RStudio Package Manager](https://blog.rstudio.com/2018/10/17/announcing-rstudio-package-manager/) add
 helpful search and filtering features along licenses.
 
 For popularity, there is much soft / informal exploration of social sentiment
 and GitHub traffic, as well as more explicit data captured by
 [cranlogs](https://cranlogs.r-pkg.org/) on worldwide package use, and
-private usage information captured by [Package Manager](todo).
+private usage information captured by [Package Manager](https://blog.rstudio.com/2018/10/17/announcing-rstudio-package-manager/).
 
 The other decision points are a bit more sensitive to each organization, but
 they are greatly simplified by having an internal repository where these
@@ -188,7 +188,7 @@ will discuss the chef's actions. You might imagine she writes down all the
 ingredients up front, or incrementally as she goes, or perhaps only when her
 dish is complete. The same is true for a researcher.
 
-As was discussed in a [blog post on this topic](todo), the researcher's
+As was discussed in a [blog post on this topic](https://rviews.rstudio.com/2018/01/18/package-management-for-reproducible-r-code/), the researcher's
 perspective of their project may very much shape her choices at the outset. For
 instance, she may opt to use `sessionInfo()` or `devtools::session_info()` as a
 lightweight way to record package versions intermittently as she goes. To this
@@ -198,13 +198,13 @@ FALSE)` be included as a lightweight way to record exact package versions.
 
 In the case of a frozen repository like MRAN or Package Manager, the researcher
 may opt at the outset to install packages from a snapshot in time by using the
-[`checkpoint`](todo) package or by specifying a Package Manager transaction:
+[`checkpoint`](https://cran.r-project.org/web/packages/checkpoint/vignettes/checkpoint.html) package or by specifying a Package Manager transaction:
 
 ```r
 options("repos" = "https://mypackagemanager.com/cran/773")
 ```
 
-Further, the researcher might decide to opt to use [`packrat`](todo) or a
+Further, the researcher might decide to opt to use [`packrat`](https://rstudio.github.io/packrat/) or a
 similar package that takes a proactive approach to tracking and ensuring that
 packages are managed in a reproducible fashion. `packrat`, in particular, is a
 very powerful tool that RStudio uses within its enterprise offerings. When using
@@ -216,7 +216,7 @@ Though `packrat` is a powerful tool, it also has some user experience problems
 that can make working with it tricky. RStudio is in the process of building a
 reimaginination of packrat that keeps its strengths while discarding some of the
 difficulties. If using `packrat` to manage reproducibility, discussion is
-welcome at [community.rstudio.com](todo) for how to manage projects.
+welcome at [community.rstudio.com](https://community.rstudio.com/c/r-admin/package-manager) for how to manage projects.
 
 Specifically, a few highlights:
 
@@ -232,11 +232,12 @@ method by which she acquires the ingredients, and the ingredients actually
 used within a given recipe. If she has any further desires to think about
 reproducibility, she is leaning towards bundling up this entire process.
 
-The way that is done in the digital realm is with virtual machine images
-([AMIs](todo), [VMIs](todo), [GMIs](todo)) or a containerization tool like
-[Docker](todo) or [Singularity](todo). In this paradigm, the researcher desires
-to "snapshot" the entire kitchen (R packages, system dependencies, operating
-system) and all ingredients, utensils, or other components of the process.
+The way that is done in the digital realm is with virtual machine images or a
+containerization tool like [Docker](https://www.docker.com/) or
+[Singularity](https://singularity.lbl.gov/). In this paradigm, the researcher
+desires to "snapshot" the entire kitchen (R packages, system dependencies,
+operating system) and all ingredients, utensils, or other components of the
+process.
 
 There is much thinking about this paradigm, but it is mostly orthogonal to
 the discussion of R packages. If R packages are not being maintained in a
