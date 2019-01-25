@@ -85,6 +85,57 @@ We will make use of this analogy throughout our paper.
 
 ## THE SOURCE
 
+The first task that our chef must explore is how to _get_ ingredients.
+Similarly, our discussion of R packages begins with _acquiring them_.
+There are a handful of canonical _sources_ for R packages, with varying
+levels of reproducibility:
+
+- CRAN
+- Bioconductor
+- GitHub / GitLab
+- In-house / self-owned
+- RForge
+
+Certain decisions might be made to throw out entire sources. For instance,
+GitHub is mostly under control of individual developers and so a package
+could _completely disappear_ on any given day. However, in practice, even
+GitHub packages have standards.
+
+Further, other sources have more formal standards, like CRAN or BioConductor.
+These sources run tests and sanity checks, and they also preserve older source
+versions of packages in an "archive" so that any given package version can be
+rebuilt at any time.
+
+As a result of these and other factors, we recommend that practitioners have
+a thoughtful look at what sources are acceptable for retrieving R packages and
+what standards should be implemented for their usage. One recommendation that 
+accompanies this one is to **set up your own package repository**.
+
+(todo image)
+
+Setting up your own package repository from the selected sources above allows
+you to set up an "ingredient inspector" or "middle-man" who can audit, preserve,
+and validate your chosen packages while removing some level of dependence on the
+package sources themselves. Further, it is immensely helpful in enterprise
+environments that may be offline or have limited access to the internet.
+
+If you are interested in setting up your own repository, popular options are
+[Artefactory](todo), [miniCRAN](todo), and [RStudio Package Manager](todo). Each
+varies in its approach at some level, so a survey of the capabilities of each is
+helpful to the decision making process.
+
+A final recommendation on package sources is to consider a source or inspector
+that can track or freeze the state of the repository. This approach is the
+approach taken by [MRAN](todo) (Microsoft's copy of CRAN). Microsoft takes a
+copy of CRAN every day, so that users can point to a given date with the
+`checkpoint` package (i.e. "2018-01-01") and see CRAN as it existed on that day.
+This type of "frozen" repository is helpful for researchers who need to
+reproduce work done at a previous time or ensure that package installation
+always returns the same packages. [RStudio Package Manager](todo) adopts a
+similar approach, except _every_ event to the repository is tracked as an
+immutable transaction, allowing full reproducibility of the repository to a
+moment in time.
+
 ## THE INGREDIENTS
 
 ## THE RECIPE
