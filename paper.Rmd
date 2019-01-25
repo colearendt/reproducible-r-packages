@@ -227,6 +227,27 @@ Specifically, a few highlights:
 
 ## THE WHOLE PROCESS
 
+The chef has now done a full audit of her ingredient source, the
+method by which she acquires the ingredients, and the ingredients actually
+used within a given recipe. If she has any further desires to think about
+reproducibility, she is leaning towards bundling up this entire process.
+
+The way that is done in the digital realm is with virtual machine images
+([AMIs](todo), [VMIs](todo), [GMIs](todo)) or a containerization tool like
+[Docker](todo) or [Singularity](todo). In this paradigm, the researcher desires
+to "snapshot" the entire kitchen (R packages, system dependencies, operating
+system) and all ingredients, utensils, or other components of the process.
+
+There is much thinking about this paradigm, but it is mostly orthogonal to
+the discussion of R packages. If R packages are not being maintained in a
+reproducible fashion as discussed above, the reproducibility that these 
+whole-environment snapshots will provide still remains limited. 
+
+As a result, we recommend to start the journey of reproducibility by managing R
+packages as discussed above. When moving into a ephemeral paradigm like Docker,
+Singularity, Kubernetes, or Infrastructure as Code, the researcher will benefit
+from having thought deeply about package reproducibility and many of the lessons
+learned will be transferrable to this alternative philosophy.
 
 # CONCLUSION
 
