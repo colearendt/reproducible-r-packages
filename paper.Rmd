@@ -112,8 +112,6 @@ a thoughtful look at what sources are acceptable for retrieving R packages and
 what standards should be implemented for their usage. One recommendation that 
 accompanies this one is to **set up your own package repository**.
 
-(todo image)
-
 Setting up your own package repository from the selected sources above allows
 you to set up an "ingredient inspector" or "middle-man" who can audit, preserve,
 and validate your chosen packages while removing some level of dependence on the
@@ -266,6 +264,3 @@ efficiency and high quality reproducibility are diametrically opposed.
 Rather, the open source ecosystem serves to optimize, improve, and extend
 even the reproducibility of packages over time, paving the way to a more
 reproducible (and tasty) future.
-
-# REFERENCES
-
