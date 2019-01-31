@@ -1,6 +1,9 @@
 ---
-title: "Best Practices for Reproducible Package Management in R"
-author: "Cole Arendt"
+title: "Best Practices for Reproducible  \nPackage Management in R"
+subtitle: "Paper AB09"
+author: 
+  - "Cole Arendt, RStudio, Inc., Raleigh, North Carolina"
+  - "Sean Lopp, RStudio, Inc., Denver, Colorado"
 date: "`r Sys.Date()`"
 output: pdf_document
 ---
